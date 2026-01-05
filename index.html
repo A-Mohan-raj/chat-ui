@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Messenger</title>
+  <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h2>Chats</h2>
+
+    <div class="chat-item active" onclick="switchChat('Alex')">
+      <div class="avatar"></div>
+      <div>
+        <p class="name">Alex</p>
+        <p class="preview">Typing...</p>
+      </div>
+    </div>
+
+    <div class="chat-item" onclick="switchChat('Sam')">
+      <div class="avatar"></div>
+      <div>
+        <p class="name">Sam</p>
+        <p class="preview">See you soon</p>
+      </div>
+    </div>
+  </aside>
+
+  <main class="chat-area">
+    <header class="chat-header">
+      <div class="avatar"></div>
+      <div>
+        <h3 id="chatName">Alex</h3>
+        <span id="status">Online</span>
+      </div>
+    </header>
+
+    <div class="messages" id="messages">
+      <div class="message other"><span>Hello 👋</span></div>
+    </div>
+
+    <div class="typing" id="typing">Alex is typing...</div>
+
+    <div class="input-box">
+      <input id="input" placeholder="Type a message..." />
+      <button onclick="send()">Send</button>
+    </div>
+  </main>
+
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
